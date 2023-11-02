@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<title>MATHEUS</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<body>
+<h1>Lista de Albuns</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Banda</td>
+                <td>Ano de lançamento</td>
+                <td>Duração (em min.)</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="album : ${albuns}">
+                <td th:text="${album.nome}"></td>
+                <td th:text="${album.nome_banda}"></td>
+                <td th:text="${album.ano_lancamento}"></td>
+                <td th:text="${album.duracao_minutos}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
